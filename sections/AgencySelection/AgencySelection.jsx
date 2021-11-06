@@ -1,6 +1,6 @@
 import { Card } from "../../collections/Card/Card";
 import { StyledCardsContainer, StyledContainter, StyledImage, StyledSubContainer, StyledSubtitle, StyledTitle } from "./elements";
-//тук ли си
+
 export const AgencySelection = ({ title, subtitle, image, cards  }) => {
     return (
         <StyledContainter>
