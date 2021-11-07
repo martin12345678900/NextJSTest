@@ -19,6 +19,12 @@ const agencyProps = {
     src: "/img/video.png",
     alt: "video"
   },
+  backgroundImage: {
+    width: 870,
+    height: 500,
+    src: "/img/background.png",
+    alt: "background"
+  },
   cards: [
     { icon: <ImBriefcase fontSize={40} />, title: "Brief", description: <p>Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.</p>},
     { icon: <GiArchiveResearch fontSize={40} />, title:  "Search", description: <p>In-depth agency search covering;<b>criteria matching</b>, door knocking and due-dilligence vetting.</p>},

@@ -11,17 +11,17 @@ import {
 
 import Image from 'next/image';
 
-export const AgencySelection = ({ title, subtitle, image, cards  }) => {
+export const AgencySelection = ({ title, subtitle, image, cards, backgroundImage  }) => {
     return (
         <StyledContainter>
             <StyledTitle>{title}</StyledTitle>
             <StyledSubtitle>{subtitle}</StyledSubtitle>
             <StyledBackgroundImageWrapper>
-                <Image src="/img/background.png" layout="responsive" width={870} height={500} />
+                <Image src={backgroundImage.src} alt={backgroundImage.alt} layout="responsive" width={backgroundImage.width} height={backgroundImage.height} />
             </StyledBackgroundImageWrapper>
             <StyledSubContainer>
                 <StyledImageWrapper width={image.width} height={image.height}>
-                    <Image src={image.src} layout="responsive" width={image.width} height={image.height} />
+                    <Image src={image.src} alt={image.alt} layout="responsive" width={image.width} height={image.height} />
                 </StyledImageWrapper>                        
                 <StyledCardsContainer>
                     <Card 
