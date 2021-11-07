@@ -11,14 +11,15 @@ export const StyledCard =  styled(({ ...props}) => <div {...props} />)`
     border-radius: 8px;
     display: flex;
     justify-content: center;
-    //transition: .3s;
     &:hover {
         border: 2px solid #1589FF;
         width: 105%;
-        //transform: scaleX(1.1);
         & h4 {
             color: #1589FF;
             text-decoration: underline;
+        }
+        &.Card {
+            background-color: blue;
         }
     }
 `;

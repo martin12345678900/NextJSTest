@@ -1,4 +1,3 @@
-import { Card } from "~/collections";
 import {
     StyledBackgroundImageWrapper,
     StyledCardsContainer, 
@@ -6,12 +5,13 @@ import {
     StyledImageWrapper, 
     StyledSubContainer, 
     StyledSubtitle, 
-    StyledTitle 
+    StyledTitle,
+    Card
 } from "./elements";
 
 import Image from 'next/image';
 
-export const AgencySelection = ({ title, subtitle, image, cards, backgroundImage  }) => {
+export const AgencySelection = ({ title, subtitle, image, cards, backgroundImage }) => {
     return (
         <StyledContainter>
             <StyledTitle>{title}</StyledTitle>
@@ -24,21 +24,7 @@ export const AgencySelection = ({ title, subtitle, image, cards, backgroundImage
                     <Image src={image.src} alt={image.alt} layout="responsive" width={image.width} height={image.height} />
                 </StyledImageWrapper>                        
                 <StyledCardsContainer>
-                    <Card 
-                        icon={cards[0].icon}
-                        title={cards[0].title}
-                        description={cards[0].description}
-                    />
-                    <Card
-                        icon={cards[1].icon}
-                        title={cards[1].title}
-                        description={cards[1].description}
-                    />
-                    <Card
-                        icon={cards[2].icon}
-                        title={cards[2].title}
-                        description={cards[2].description} 
-                    />
+                    {cards.map((card, index) => <Card key={index} index={index + 1} {...card} />)}
                 </StyledCardsContainer>
             </StyledSubContainer>
         </StyledContainter>

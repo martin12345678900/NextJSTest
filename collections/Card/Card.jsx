@@ -1,9 +1,9 @@
 import { StyledCard, StyledCardDescription, StyledCardDetailsWrapper, StyledCardTitle, StyledIconWrapper } from "./elements"
 
 // The Card to be exported goes here
-export const Card = ({ title, icon, description }) => {
+export const Card = ({ icon, title, description, index }) => {
     return (
-        <StyledCard>
+        <StyledCard index={index}>
             <StyledIconWrapper>{icon}</StyledIconWrapper>
             <StyledCardDetailsWrapper>
                 <StyledCardTitle>{title}</StyledCardTitle>

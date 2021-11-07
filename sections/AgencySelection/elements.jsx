@@ -1,10 +1,25 @@
 import styled from "styled-components";
 import { SectionHeading, SectionSubheading } from "~/components";
 
+export { Card } from "~/collections";
+
 export const StyledContainter = styled(({ ...props}) => <div {...props} />)`
     height: 90vh;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+`;
+
+export const StyledCardsContainer = styled((props) => <div {...props} />)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-left: 6%;
+    margin-top: 2rem;
+    @media (max-width: 1024px) {
+        width: 70%;
+        margin-left: -10%;
+    }
 `;
 
 export const StyledBackgroundImageWrapper = styled(({ ...props}) => <div {...props}/>)`
@@ -42,22 +57,8 @@ export const StyledSubContainer = styled(({ ...props}) => <div {...props} />)`
         justify-content: flex-start;
         align-items: center;
         & img {
-            width: 70%;
+            width: 80%;
         }
-    }
-`;
-
-
-export const StyledCardsContainer = styled(({ ...props }) => <div {...props} />)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30%;
-    margin-left: 6%;
-    margin-top: 2rem;
-    @media (max-width: 1024px) {
-        width: 70%;
-        margin-left: -10%;
     }
 `;
 
