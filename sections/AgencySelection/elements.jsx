@@ -6,7 +6,7 @@ export { Card } from "~/collections";
 export const StyledContainter = styled(({ ...props}) => <div {...props} />)`
     height: 90vh;
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: inherit;
 `;
 
 export const StyledCardsContainer = styled((props) => <div {...props} />)`
