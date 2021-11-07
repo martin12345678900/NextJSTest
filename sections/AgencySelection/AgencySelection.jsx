@@ -17,7 +17,7 @@ export const AgencySelection = ({ title, subtitle, image, cards  }) => {
             <StyledSubtitle>{subtitle}</StyledSubtitle>
             <StyledSubContainer>
                 <StyledImageWrapper width={image.width} height={image.height}>
-                    <Image src={image.src} layout="responsive" width={image.width} height={image.height} />
+                    <Image src={image.src} layout="fill" width={image.width} height={image.height} />
                 </StyledImageWrapper>                        
                 <StyledCardsContainer>
                     <Card 
