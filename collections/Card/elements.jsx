@@ -10,7 +10,7 @@ export const StyledCard =  styled(({ ...props}) => <div {...props} />)`
     padding: 1.5rem;
     border-radius: 8px;
     display: flex;
-    position: relative;
+    justify-content: center;
     &:hover {
         border: 2px solid #1589FF;
         & h4 {
@@ -21,25 +21,20 @@ export const StyledCard =  styled(({ ...props}) => <div {...props} />)`
 `;
 
 export const StyledIconWrapper = styled(({ ...props}) => <div {...props} />)`
-    position: absolute;
-    left: 5%;
-    top: 15%;
     padding: 1.5rem;
 `;
 
 export const StyledCardDetailsWrapper = styled(({ ...props}) => <div {...props} />)`
-    position: absolute;
-    left: 20%;
-    top: -20%;
     display: flex;
     flex-direction: column;
-    padding: 1.3rem 1rem 1rem 2.3rem;
+    justify-content: center;
+    padding: 1.5rem 1rem 1rem 2rem;
     @media all and (max-width: 1024px) {
         padding-top: 2.5rem;
         & div {
             font-size: .8rem;
         }
-        & h4 {
+        & p {
             font-size: 1rem;
         }
     }
