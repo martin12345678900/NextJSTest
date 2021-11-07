@@ -1,7 +1,8 @@
 // Styled elements for the Card go here
 import styled from "styled-components";
+import { SectionInnerHeading, SectionParagraph } from "~/components";
 
-export const StyledCard =  styled.div`
+export const StyledCard =  styled(({ ...props}) => <div {...props} />)`
     background-color: whitesmoke;
     width: 100%;
     height: 85px;
@@ -19,14 +20,14 @@ export const StyledCard =  styled.div`
     }
 `;
 
-export const StyledIconWrapper = styled.div`
+export const StyledIconWrapper = styled(({ ...props}) => <div {...props} />)`
     position: absolute;
     left: 5%;
     top: 15%;
     padding: 1.5rem;
 `;
 
-export const StyledCardDetailsWrapper = styled.div`
+export const StyledCardDetailsWrapper = styled(({ ...props}) => <div {...props} />)`
     position: absolute;
     left: 20%;
     top: -20%;
@@ -44,13 +45,14 @@ export const StyledCardDetailsWrapper = styled.div`
     }
 `;
 
-export const StyledCardTitle = styled.h4`
-    font-size: 1.3rem;
-    margin-bottom: -.7rem;
+export const StyledCardTitle = styled((props) => <SectionInnerHeading {...props} /> )`
+    margin-bottom: -1.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 `;
 
-export const StyledCardDescription = styled.div`
-    font-size: 1rem;
+export const StyledCardDescription = styled((props) => <SectionParagraph {...props} />)`
+    font-size: .95rem;
 `;
 
 
