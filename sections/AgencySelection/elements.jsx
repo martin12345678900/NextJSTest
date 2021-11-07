@@ -1,39 +1,40 @@
 import styled from "styled-components";
+import { SectionHeading, SectionSubheading } from "~/components";
 
-export const StyledContainter = styled.div`
-    padding: 5rem;
-    height: 85vh;
+export const StyledContainter = styled(({ ...props}) => <div {...props} />)`
+    height: 90vh;
     background: url("img/background.png");
     background-size: 65%;
     background-repeat: no-repeat;
-    background-position: left 15% top 80%;
+    background-position: left 10% top 70%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     @media (max-width: 1024px) {
         background-position: left 20% top 80%;
     }
 `;
 
-export const StyledTitle = styled.h1`
-    font-size: 2.6rem;
-    font-weight: bold;
-    text-align: center;
-    font-family: inherit;
+export const StyledImageWrapper = styled(({ ...props}) => <div {...props} />)`
+    width: 310px;
+    height: 500px;
 `;
 
-export const StyledSubtitle = styled.h4`
-    font-family: inherit;
-    font-size: 1.4rem;
+export const StyledTitle = styled((props) => <SectionHeading {...props} />)`
     text-align: center;
-    font-weight: 300;
-    margin-top: -.8rem;
 `;
 
-export const StyledSubContainer = styled.div`
+
+export const StyledSubtitle = styled((props) => <SectionSubheading {...props} />)`
+    text-align: center;
+    margin-top: -2.2rem;
+`;
+
+export const StyledSubContainer = styled(({ ...props}) => <div {...props} />)`
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: center;
     padding-top: 2rem;
+    position: relative;
     @media (max-width: 1024px) {
         flex-direction: column;
         justify-content: flex-start;
@@ -44,13 +45,8 @@ export const StyledSubContainer = styled.div`
     }
 `;
 
-export const StyledImage = styled.img`
-    width: ${(props) => props.width}%;
-    height: ${(props) => props.height}px;
-    border-radius: 8px;
-`;
 
-export const StyledCardsContainer = styled.div`
+export const StyledCardsContainer = styled(({ ...props }) => <div {...props} />)`
     display: flex;
     flex-direction: column;
     justify-content: center;

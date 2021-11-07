@@ -15,10 +15,10 @@ const agencyProps = {
   title: "Managed agency selection",
   subtitle: "Stengthen your outgoing process",
   image: {
-    width: 26,
-    height: 510,
-    src: "img/video.png",
-    alt: "video image"
+    width: 310,
+    height: 500,
+    src: "/img/video.png",
+    alt: "video"
   },
   cards: [
     { icon: <ImBriefcase fontSize={40} />, title: "Brief", description: <p>Complete <b>brief writing or simple guidance</b> on what to include, we've got you covered.</p>},

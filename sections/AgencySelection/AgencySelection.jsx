@@ -1,18 +1,25 @@
-import { Card } from "../../collections/Card/Card";
-import { StyledCardsContainer, StyledContainter, StyledImage, StyledSubContainer, StyledSubtitle, StyledTitle } from "./elements";
-//тук ли си
+import { Card } from "~/collections";
+import {
+    StyledCardsContainer, 
+    StyledContainter, 
+    StyledImageWrapper, 
+    StyledSubContainer, 
+    StyledSubtitle, 
+    StyledTitle 
+} from "./elements";
+
+import Image from 'next/image';
+
+
 export const AgencySelection = ({ title, subtitle, image, cards  }) => {
     return (
         <StyledContainter>
             <StyledTitle>{title}</StyledTitle>
             <StyledSubtitle>{subtitle}</StyledSubtitle>
             <StyledSubContainer>
-                <StyledImage
-                    width={image.width}
-                    height={image.height}
-                    src={image.src}
-                    alt={image.alt}
-                />
+                <StyledImageWrapper width={image.width} height={image.height}>
+                    <Image src={image.src} layout="responsive" width={image.width} height={image.height} />
+                </StyledImageWrapper>                        
                 <StyledCardsContainer>
                     <Card 
                         icon={cards[0].icon}
