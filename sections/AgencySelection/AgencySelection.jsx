@@ -10,7 +10,6 @@ import {
 
 import Image from 'next/image';
 
-
 export const AgencySelection = ({ title, subtitle, image, cards  }) => {
     return (
         <StyledContainter>
