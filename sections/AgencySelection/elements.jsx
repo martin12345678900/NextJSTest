@@ -34,7 +34,6 @@ export const StyledSubContainer = styled(({ ...props}) => <div {...props} />)`
     flex-direction: row;
     justify-content: center;
     padding-top: 2rem;
-    position: relative;
     @media (max-width: 1024px) {
         flex-direction: column;
         justify-content: flex-start;
