@@ -1,5 +1,4 @@
-import { Hero } from "../sections";
-import { AgencySelection } from "../sections";
+import { Hero, AgencySelection } from "~/sections";
 import { ImBriefcase } from "react-icons/im";
 import { GiPitchfork, GiArchiveResearch } from "react-icons/gi";
 

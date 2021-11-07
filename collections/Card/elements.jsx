@@ -11,8 +11,11 @@ export const StyledCard =  styled(({ ...props}) => <div {...props} />)`
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    //transition: .3s;
     &:hover {
         border: 2px solid #1589FF;
+        width: 105%;
+        //transform: scaleX(1.1);
         & h4 {
             color: #1589FF;
             text-decoration: underline;
@@ -30,12 +33,12 @@ export const StyledCardDetailsWrapper = styled(({ ...props}) => <div {...props} 
     justify-content: center;
     padding: 1.5rem 1rem 1rem 2rem;
     @media all and (max-width: 1024px) {
-        padding-top: 2.5rem;
+        padding-top: 2rem;
         & div {
-            font-size: .8rem;
+            font-size: 1rem;
         }
         & p {
-            font-size: 1rem;
+            font-size: .85rem;
         }
     }
 `;

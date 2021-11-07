@@ -1,5 +1,6 @@
 import { Card } from "~/collections";
 import {
+    StyledBackgroundImageWrapper,
     StyledCardsContainer, 
     StyledContainter, 
     StyledImageWrapper, 
@@ -15,6 +16,9 @@ export const AgencySelection = ({ title, subtitle, image, cards  }) => {
         <StyledContainter>
             <StyledTitle>{title}</StyledTitle>
             <StyledSubtitle>{subtitle}</StyledSubtitle>
+            <StyledBackgroundImageWrapper>
+                <Image src="/img/background.png" layout="responsive" width={870} height={500} />
+            </StyledBackgroundImageWrapper>
             <StyledSubContainer>
                 <StyledImageWrapper width={image.width} height={image.height}>
                     <Image src={image.src} layout="responsive" width={image.width} height={image.height} />

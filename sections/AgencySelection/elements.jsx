@@ -3,14 +3,17 @@ import { SectionHeading, SectionSubheading } from "~/components";
 
 export const StyledContainter = styled(({ ...props}) => <div {...props} />)`
     height: 90vh;
-    background: url("img/background.png");
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: left 10% top 70%;
+    position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    @media (max-width: 1024px) {
-        background-position: left 20% top 80%;
-    }
+`;
+
+export const StyledBackgroundImageWrapper = styled(({ ...props}) => <div {...props}/>)`
+    width: 870px;
+    height: 500px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: -1;
 `;
 
 export const StyledImageWrapper = styled(({ ...props}) => <div {...props} />)`
@@ -54,8 +57,7 @@ export const StyledCardsContainer = styled(({ ...props }) => <div {...props} />)
     margin-top: 2rem;
     @media (max-width: 1024px) {
         width: 70%;
-        margin-left: -12%;
-        margin-top: 4rem;
+        margin-left: -10%;
     }
 `;
 
